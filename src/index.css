@@ -1,13 +1,148 @@
-body {
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+html {
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  color: #203c59;
+}
+
+.container {
+  margin: 50px 0;
+}
+
+.scoreboard {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  gap: 20px;
+}
+
+.score {
+  width: 100%;
+  text-align: center;
+}
+
+.replay {
+  width: 100%;
+  font-size: 1rem;
+  padding: 4px;
+  height: 50px;
+  border: solid #0097d7 1px;
+  color: #fff;
+  background-color: #0097d7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 40vw;
+  margin-bottom: 10px;
+}
+
+tr {
+  height: 70px;
+}
+
+th {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f6fafd;
+}
+
+.choice-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 4px;
+  height: 50px;
+  width: 32%;
+  border: solid #0097d7 1px;
+  border-radius: 5px;
+  color: #203c59;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #02de62;
+  border: solid #02de62 1px;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #fd5502;
+  border: solid #fd5502 1px;
+  color: #fff;
+}
+
+.alert {
+  height: 3rem;
+  margin-top: 10px;
+  padding: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #02de62;
+}
+
+.alert-danger {
+  background-color: #fb0404;
+}
+
+@media screen and (max-width: 1200px) {
+  table {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  table {
+    width: 100vw;
+  }
+  .choice-container {
+    gap: 7px;
+  }
+  .btn {
+    width: 100%;
+  }
+  tr {
+    height: 90px;
+  }
 }
